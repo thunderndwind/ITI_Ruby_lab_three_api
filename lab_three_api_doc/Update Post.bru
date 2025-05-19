@@ -1,0 +1,19 @@
+meta {
+  name: Update Post
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://localhost:3000/posts/5
+  body: none
+  auth: none
+}
+
+body:json {
+  {
+    "title": "first post",
+    "content": "first post content",
+    "creator_id":1
+  }
+}
