@@ -148,3 +148,17 @@
     ],
     "variable": []
   }
+
+
+
+### CSRF Token Protection in APIs
+
+CSRF (Cross-Site Request Forgery) is generally a threat to web applications that rely on cookies for authentication. When building APIs, CSRF can be mitigated in the following ways:
+
+1. **Use Token-based Authentication** (Preferred)
+   - Use `Bearer Tokens`, `JWT (JSON Web Tokens)`, or `OAuth`.
+   - Tokens are sent in the `Authorization` header, not in cookies, so CSRF attacks are much less likely.
+
+2. **Disable CSRF Middleware for APIs**
+   - In frameworks like Django Rest Framework (DRF), CSRF protection can be disabled for API views since they typically don't use cookies.
+
